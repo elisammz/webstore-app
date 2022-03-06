@@ -1,0 +1,44 @@
+{
+  "production": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mywebstorev2-production-204822-authRole",
+      "UnauthRoleArn": "arn:aws:iam::302038264747:role/amplify-mywebstorev2-production-204822-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::302038264747:role/amplify-mywebstorev2-production-204822-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-mywebstorev2-production-204822-deployment",
+      "UnauthRoleName": "amplify-mywebstorev2-production-204822-unauthRole",
+      "StackName": "amplify-mywebstorev2-production-204822",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:302038264747:stack/amplify-mywebstorev2-production-204822/d8f18520-9179-11ec-929f-06c83f30af2b",
+      "AmplifyAppId": "d1mip7sbk3kfif"
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mywebstorev2-dev-211350-authRole",
+      "UnauthRoleArn": "arn:aws:iam::302038264747:role/amplify-mywebstorev2-dev-211350-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::302038264747:role/amplify-mywebstorev2-dev-211350-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-mywebstorev2-dev-211350-deployment",
+      "UnauthRoleName": "amplify-mywebstorev2-dev-211350-unauthRole",
+      "StackName": "amplify-mywebstorev2-dev-211350",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:302038264747:stack/amplify-mywebstorev2-dev-211350/67c33a70-917d-11ec-8901-0ef5f11030b7",
+      "AmplifyAppId": "d1xmq45y5nvm74"
+    },
+    "categories": {
+      "auth": {
+        "mywebstorev2850d47e9": {},
+        "true": {}
+      },
+      "function": {
+        "createOrder": {
+          "deploymentBucketName": "amplify-mywebstorev2-dev-211350-deployment",
+          "s3Key": "amplify-builds/createOrder-52784a4571756a6e5a2f-build.zip"
+        },
+        "processPayment": {
+          "deploymentBucketName": "amplify-mywebstorev2-dev-211350-deployment",
+          "s3Key": "amplify-builds/processPayment-786c58624a6959483654-build.zip"
+        }
+      }
+    }
+  }
+}

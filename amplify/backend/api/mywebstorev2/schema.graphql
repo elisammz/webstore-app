@@ -1,0 +1,78 @@
+type Product
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: private, operations: [read] }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String!
+  description: String
+  image: String
+  featured: Boolean
+  price: Float
+}
+
+type ProductOrder
+  @model(queries: null, subscriptions: null)
+  @key(name: "byProduct", fields: ["product_id", "order_id"])
+  @key(name: "byOrder", fields: ["order_id", "product_id"])
+  @auth(
+    rules: [
+      { allow: owner, identityClaim: "email", ownerField: "customer" }
+      { allow: groups, groups: ["Admin"] }
+    ]
+  ) {
+  id: ID!
+  product_id: ID!
+  order_id: ID!
+  product: Product @connection(fields: ["product_id"])
+  order: Order @connection(fields: ["order_id"])
+}
+
+type Order
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      # only owner can see his orders
+      { allow: owner, identityClaim: "email", ownerField: "customer" }
+      # allow admins to view orders
+      { allow: groups, groups: ["Admin"] }
+    ]
+  )
+  @key(name: "byUser", fields: ["user"]) {
+  id: ID!
+  user: String!
+  date: String
+  total: Float
+  products: [ProductOrder] @connection(keyName: "byOrder", fields: ["id"])
+}
+
+enum OrderStatus {
+  SUCCESS
+  FAILED
+}
+
+input CartItem {
+  id: ID!
+  title: String
+  image: String
+  price: Float
+  amount: Int
+}
+
+input ProcessOrderInput {
+  id: ID!
+  cart: [CartItem]
+  total: Float!
+  token: String!
+  address: String
+}
+
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "processPayment-${env}")
+    @function(name: "createOrder-${env}")
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "mywebstorev2",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/elisamendoza/ws/mywebstorev2/amplify/backend/api/mywebstorev2/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authmywebstorev2850d47e9"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-02-19T12:37:16.924Z",
+        "keyDescription": "guest user access to products"
+      }
+    ]
+  }
+}
