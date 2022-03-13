@@ -108,7 +108,7 @@ const Admin = () => {
           <form className="admin-form" onSubmit={handleSubmit}>
             <div>
               {image ? (
-                <img src={image} alt="" />
+                <img src={image} alt="" width={300} />
               ) : (
                 <input
                   type="file"

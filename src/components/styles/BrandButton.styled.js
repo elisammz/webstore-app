@@ -9,10 +9,12 @@ const BrandButton = styled(Link)`
   font-family: sans-serif;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.4s;
 
   ${(props) =>
     props.primary &&
     css`
+      transform: translate(-50%, -50%);
       font-size: 16px;
       padding: 20px 45px;
       background: linear-gradient(
@@ -28,7 +30,6 @@ const BrandButton = styled(Link)`
       color: #546fff;
       font-size: 16px;
       padding: 10px 25px;
-      transition: all 200ms ease-in-out;
     `}
 
   &:hover {

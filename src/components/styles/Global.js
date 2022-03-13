@@ -4,10 +4,10 @@ const GlobalStyles = createGlobalStyle`
 
 body{
     background: #FFFFFF;
-    font-family:'Poppins', sans-serif;  
-    color: #828282;
+    font-family:'Poppins'; 
     font-weight: 400;
     font-size: 16px; 
+    line-height: 1.9;
 }
 
 h1{
@@ -16,21 +16,20 @@ h1{
 
 h2 {
     margin: 50px 0px 50px 0px;
-    color: #9A9AA1;
+    color:  rgba(255, 255, 255, 0.6);
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 1.3rem;
+    font-size: 21px;
   }  
 
 h3{
     font-size: 18px;
-    color: #060221;
-    font-weight: 600;
-    line-height: 1.9;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px
 }
 
 p{
+    font-size: 16px;
     line-height: 1.5;
     font-family:'Cerebri Sans',sans-serif;
     

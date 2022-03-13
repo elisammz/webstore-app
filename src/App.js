@@ -12,14 +12,24 @@ import Admin from "./pages/Admin";
 import "bootstrap/dist/css/bootstrap.min.css";
 //Font styles
 import "./App.css";
-// Components
-import Navbar from "./components/styles/Navbar.styled";
-// Amplify Configurations
-import Amplify from "aws-amplify";
-import awsExports from "./aws-exports";
-import GlobalStyles from "./components/styles/Global";
 
+//MUI
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+// Components
+import GlobalStyles from "./components/styles/Global";
+import Navbar from "./components/styles/Navbar.styled";
+import Footer from "./components/styles/Footer.styled";
+// Amplify
+import Amplify from "aws-amplify";
+
+// Amplify Configurations
+import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
+
+const theme = createTheme({
+  palette: { type: "dark" },
+});
 
 function App() {
   return (
@@ -35,6 +45,7 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </>
   );
 }
