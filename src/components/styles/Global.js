@@ -8,10 +8,18 @@ body{
     font-weight: 400;
     font-size: 16px; 
     line-height: 1.9;
+   
 }
 
 h1{
-    font-weight: 300;
+    font-size: 50px;
+}
+
+h4{
+    font-size: 18px; 
+    font-weight: 600;
+    line-height: 55px;
+    color: rgb(255, 255, 255);
 }
 
 h2 {

@@ -17,6 +17,7 @@ const StyledFooter = styled.section`
   padding: 80px 20px;
   color: #98a2a8;
   display: block;
+  font-size: 15px;
 
   h3,
   p {
@@ -32,19 +33,18 @@ const StyledFooter = styled.section`
     line-height: 40px;
     margin-right: 15px;
     transition: 0.3s;
-    cursor: default !important;
     font-size: 15px;
   }
 
-  styledLink:hover {
-    color: #ffffff;
+  .styledLink:hover {
+    color: white;
   }
 `;
 
 function Footer() {
   return (
     <StyledFooter>
-      <div className="d-lg-flex flex-row ">
+      <div className="d-sm-flex flex-row ">
         <div className="col">
           <h3>Contact us</h3>
           <p>help@genex.com</p>
@@ -89,7 +89,7 @@ function Footer() {
         </Link>
       </Nav>
 
-      <div className="styledLink">©2022 GeneX Inc. - All Right Reserved</div>
+      <div>©2022 GeneX Inc. - All Right Reserved</div>
     </StyledFooter>
   );
 }

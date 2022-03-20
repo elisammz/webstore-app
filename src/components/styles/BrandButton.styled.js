@@ -15,7 +15,7 @@ const BrandButton = styled(Link)`
     props.primary &&
     css`
       transform: translate(-50%, -50%);
-      font-size: 16px;
+      font-size: 1em;
       padding: 20px 45px;
       background: linear-gradient(
         90deg,
