@@ -1,3 +1,4 @@
+import { height } from "@mui/system";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import styled from "styled-components";
@@ -10,11 +11,12 @@ const StyledStories = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
-  height: 350px;
+  height: 320px;
 
   .testimonial-container {
-    margin: 35px 5px auto;
+    margin: 35px 15px;
     position: flex;
+    text-align: center;
   }
 
   .testimonial-heading {
@@ -28,10 +30,14 @@ const StyledStories = styled.section`
   .testimonial-name {
     color: #2d313e;
     text-transform: uppercase;
+    padding: 0 auto;
+    margin: 0 auto;
   }
 
   .testimonial {
-    font-size: 20px;
+    line-height: 1.9;
+    font-size: 24px;
+    margin: 0 auto;
   }
 `;
 
@@ -54,12 +60,12 @@ export default function Stor(props) {
     <StyledStories>
       <Carousel>
         {items.map((item, i) => (
-          <div className="col text-center testimonial-container">
+          <div className="testimonial-container">
             <div key={i} item={item}>
               <div className=" testimonial-heading ">Real stories</div>
               <p className=" testimonial p-4">"{item.description}"</p>
               <h3 className="testimonial-name">{item.name}</h3>
-              <h3 className="testimonial-name">{item.job}</h3>
+              <p className="">{item.job}</p>
             </div>
           </div>
         ))}
