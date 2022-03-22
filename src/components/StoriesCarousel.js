@@ -1,7 +1,7 @@
-import { height } from "@mui/system";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import styled from "styled-components";
+import { Paper } from "@mui/material";
 
 import ImgSrc from "../assets/stories-background.jpg";
 
@@ -12,6 +12,7 @@ const StyledStories = styled.section`
   background-repeat: no-repeat;
   background-position: center right;
   height: 320px;
+  color: white;
 
   .testimonial-container {
     margin: 35px 15px;
@@ -21,14 +22,12 @@ const StyledStories = styled.section`
 
   .testimonial-heading {
     font-size: 16px;
-    color: ##2d313e;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.2em;
   }
 
   .testimonial-name {
-    color: #2d313e;
     text-transform: uppercase;
     padding: 0 auto;
     margin: 0 auto;
@@ -36,8 +35,15 @@ const StyledStories = styled.section`
 
   .testimonial {
     line-height: 1.9;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0 auto;
+  }
+
+  @media (max-width: 820px) {
+    .testimonial {
+      line-height: 1.9;
+      font-size: 14px;
+    }
   }
 `;
 
