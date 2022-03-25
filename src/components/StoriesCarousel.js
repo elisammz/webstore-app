@@ -51,7 +51,7 @@ export default function Stor(props) {
     {
       name: "Max Smith",
       description:
-        "Our lab saved more than $50,000 using GeneX's fast and reliable HLA imputation solution. Thank you!",
+        "Our lab saved more than $50,000 using GeneX's HLA imputation solution!",
       job: "Researcher",
     },
     {

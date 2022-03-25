@@ -1,44 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
+import ReactTextRotator from "react-text-rotator";
 
-export default function TextAnimation() {
-  const [count, setCount] = useState(0);
-  const [title, setTitle] = useState("");
-
-  return (
-    <Wrapper>
-      {words
-        .filter((word) => word.id === 2)
-        .map((word) => (
-          <h1>{word.message}</h1>
-        ))}
-    </Wrapper>
-  );
-}
-
-const words = [
+const titles = [
   {
-    id: 1,
-    message: "that saves lives",
+    text: "that saves lives",
   },
   {
-    id: 2,
-    message: "with scientific rationale",
+    text: "in bioinformatics",
+  },
+  {
+    text: "for personalized medicine",
   },
 ];
 
-const animation = keyframes`
-0% {opacity: 1; transform: translateY(0); }
-50% {opacity: 0; transform: translateY(-50px); }
-100% {opacity: 1; transform: translateY(0px) ; }
-`;
+function TextAnimation() {
+  return (
+    <h1>
+      <ReactTextRotator content={titles} startDelay={2000} />
+    </h1>
+  );
+}
 
-const Wrapper = styled.span`
-  opacity: 0;
-  display: inline-block;
-  animation-name: ${animation};
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  overflow: hidden;
-`;
+export default TextAnimation;
