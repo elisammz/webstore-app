@@ -1,5 +1,4 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
 import ReactTextRotator from "react-text-rotator";
 
 const titles = [

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
 const BrandButton = styled(Link)`
@@ -9,14 +9,14 @@ const BrandButton = styled(Link)`
   font-family: sans-serif;
   cursor: pointer;
   text-decoration: none;
-  transition: 0.4s;
+  transition: all 0.2s;
 
   ${(props) =>
     props.primary &&
     css`
       transform: translate(-50%, -50%);
       font-size: 1em;
-      padding: 20px 45px;
+      padding: 30px 45px;
       background: linear-gradient(
         90deg,
         rgba(85, 111, 255, 1) 0%,
@@ -33,6 +33,8 @@ const BrandButton = styled(Link)`
     `}
 
   &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color: white;
     background: linear-gradient(
       90deg,

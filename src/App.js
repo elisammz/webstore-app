@@ -12,17 +12,16 @@ import Admin from "./pages/Admin";
 import "bootstrap/dist/css/bootstrap.min.css";
 //Font styles
 import "./App.css";
-
+//Animations
+import "animate.css";
 //MUI
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-
 // Components
 import GlobalStyles from "./components/styles/Global";
 import Navbar from "./components/styles/Navbar.styled";
 import Footer from "./components/styles/Footer.styled";
 // Amplify
 import Amplify from "aws-amplify";
-
 // Amplify Configurations
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
