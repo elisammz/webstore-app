@@ -33,7 +33,6 @@ const theme = createTheme({
 function App() {
   return (
     <>
-      <Navbar />
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />} />

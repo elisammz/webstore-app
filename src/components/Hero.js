@@ -7,15 +7,20 @@ import ImgSrc from "../assets/hero-background-experimental.jpg";
 //Components
 import BrandButton from "./styles/BrandButton.styled";
 import TextAnimation from "./styles/TextAnimation.styled";
+import Navbar from "../components/styles/Navbar.styled";
 
 const StyledHeader = styled.div`
 
   background-image: url(${ImgSrc});
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 100vh;
   display: center;
 
+ .row {
+    padding-top: 100px !important;
+    padding-left: 50px;
+  }
 
   h1 {
     color: #FCFCFC;
@@ -40,6 +45,7 @@ export default function Hero() {
         animationInDuration={2000}
         isVisible={true}
       >
+        <Navbar />
         <StyledHeader>
           <div className="row">
             <div className="col">
@@ -49,7 +55,7 @@ export default function Hero() {
                 Next generation of algorithms for accurate genotype prediction
               </h2>
             </div>
-            <div className="row">
+            <div className="col pt-5">
               <Animated
                 animationIn="fadeIn"
                 animationInDelay={2000}
