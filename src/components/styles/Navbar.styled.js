@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Animated } from "react-animated-css";
-//Bootstrap components
+//Bootstrap
 import { Navbar, Nav, Container } from "react-bootstrap";
+//MUI icons
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const StyledNavbar = styled.div`
   text-decoration: none;
@@ -37,12 +40,15 @@ const StyledNavbar = styled.div`
     color: #546fff;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 992px) {
     .navbar {
       background-color: white !important;
     }
     .navbar-toggler {
       border-color: #e9799e;
+    }
+    .icon {
+      display: none;
     }
   }
 `;
@@ -79,6 +85,12 @@ function NavBar() {
               </Link>
             </Nav>
           </Navbar.Collapse>
+          <Link to="/" className="styledLink icon">
+            <LinkedInIcon />
+          </Link>
+          <Link to="/" className="styledLink icon">
+            <YouTubeIcon />
+          </Link>
         </Container>
       </Navbar>
     </StyledNavbar>

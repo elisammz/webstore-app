@@ -8,9 +8,6 @@ const titles = [
   {
     text: "in bioinformatics",
   },
-  {
-    text: "for personalized medicine",
-  },
 ];
 
 function TextAnimation() {
