@@ -10,7 +10,7 @@ const StyledStories = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
-  height: 320px;
+  height: 50vh;
   color: white;
 
   .testimonial-container {

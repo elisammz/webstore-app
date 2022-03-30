@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Animated } from "react-animated-css";
 //Assets
 import ImgSrc from "../assets/hero-background-experimental.jpg";
@@ -34,9 +34,18 @@ const StyledHeader = styled.div`
     font-size: 21px;
   }
 
+  .brand-button:hover {
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
+  }
+
   @media (max-width: 992px) {
     h1 {
       font-size: 45px !important;
+    }
+
+    .row {
+      justify-content: center;
     }
 
     .brand-button {

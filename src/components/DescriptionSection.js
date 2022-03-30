@@ -1,24 +1,19 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { Animated } from "react-animated-css";
+import styled from "styled-components";
 //Assets
 import ImgSrc from "../assets/description-dna.jpg";
 //Components
 import BrandButton from "./styles/BrandButton.styled";
-import TextAnimation from "./styles/TextAnimation.styled";
+import Description from "./styles/ScrollAnimation";
 
-const StyledDescriptions = styled.div`
+const StyledDescriptions = styled.section`
   height: 100vh;
-
-  .row {
-    padding: 200px 150px 0px 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .brand-button {
-    justify-content: center;
+    display: flex;
   }
 
   h1 {
@@ -26,8 +21,9 @@ const StyledDescriptions = styled.div`
     font-weight: 600;
   }
 
-  h2 {
-    font-size: 21px;
+  .brand-button:hover {
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
   }
 
   @media (max-width: 992px) {
@@ -38,6 +34,10 @@ const StyledDescriptions = styled.div`
     .brand-button {
       padding: 50px 0px 0px 0px !important;
     }
+
+    .description-img {
+      display: none;
+    }
   }
 
   @media (max-width: 820px) {
@@ -46,7 +46,6 @@ const StyledDescriptions = styled.div`
     }
 
     .row {
-      padding: 200px 20px 0px 20px !important;
       justify-content: left;
     }
 
@@ -56,20 +55,26 @@ const StyledDescriptions = styled.div`
   }
 `;
 
-export default function Descriptions() {
+export default function FullDescriptions() {
   return (
     <StyledDescriptions>
       <div className="row">
-        <div className="col-6">
-          <h1>Computational Genomics</h1>
+        <div className="col-md-auto">
+          <h1>
+            <Description text="Computational " />
+            <Description text="Genomics" />
+          </h1>
           <br />
-          <BrandButton primary to="/products">
+          <BrandButton secondary to="/products">
             Our Solutions
+          </BrandButton>
+          <BrandButton tertiary to="/products">
+            MatchDonor.org
           </BrandButton>
         </div>
 
-        <div className="col-md-auto brand-button">
-          <img src={ImgSrc} width="500" />
+        <div className="col-md-auto description-img">
+          <img src={ImgSrc} width="400" />
         </div>
       </div>
     </StyledDescriptions>

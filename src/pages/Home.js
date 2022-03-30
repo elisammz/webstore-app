@@ -13,7 +13,7 @@ import { ProductContext } from "../context/products";
 // Components
 import Hero from "../components/Hero";
 import StoriesCarousel from "../components/StoriesCarousel";
-import Descriptions from "../components/DescriptionSection";
+import FullDescriptions from "../components/DescriptionSection";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -129,8 +129,8 @@ const Home = () => {
           </div>
         ))}
       </Box>
+      <FullDescriptions />
       <StoriesCarousel />
-      <Descriptions />
     </>
   );
 };
