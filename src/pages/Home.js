@@ -90,7 +90,8 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Box className="d-lg-flex justify-content-around">
+      <br />
+      <Box className="d-lg-flex justify-content-around p-5">
         {featured.map(({ image, title, id }) => (
           <div key={id} className="text-center pb-5">
             <ImageButton

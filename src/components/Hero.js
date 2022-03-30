@@ -17,7 +17,12 @@ const StyledHeader = styled.div`
   .row {
     padding: 200px 150px 0px 150px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand-button {
+    display: flex;
   }
 
   h1 {
@@ -33,9 +38,9 @@ const StyledHeader = styled.div`
     h1 {
       font-size: 45px !important;
     }
-    .row {
-      padding: 100px 75px 0px 75px !important;
-      justify-content: left;
+
+    .brand-button {
+      padding: 50px 0px 0px 0px !important;
     }
   }
 
@@ -43,9 +48,14 @@ const StyledHeader = styled.div`
     h1 {
       font-size: 30px !important;
     }
+
     .row {
       padding: 200px 20px 0px 20px !important;
       justify-content: left;
+    }
+
+    .brand-button {
+      padding: 50px 20px 0px 20px !important;
     }
   }
 `;
@@ -68,7 +78,7 @@ export default function Hero() {
                 Next generation of algorithms for accurate genotype prediction
               </h2>
             </div>
-            <div className=" col-md-auto">
+            <div className="col-md-auto brand-button ">
               <Animated
                 animationIn="fadeIn"
                 animationInDelay={2000}
