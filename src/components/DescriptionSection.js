@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Animated } from "react-animated-css";
 //Assets
-import ImgSrc from "../assets/hero-background-experimental.jpg";
+import ImgSrc from "../assets/description-dna.jpg";
 //Components
 import BrandButton from "./styles/BrandButton.styled";
 import TextAnimation from "./styles/TextAnimation.styled";
