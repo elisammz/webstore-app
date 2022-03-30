@@ -14,16 +14,16 @@ const StyledDescriptions = styled.div`
     padding: 200px 150px 0px 150px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .brand-button {
-    display: flex;
+    justify-content: center;
   }
 
   h1 {
-    color: #fcfcfc;
     font-size: 60px;
+    font-weight: 600;
   }
 
   h2 {
@@ -56,16 +56,20 @@ const StyledDescriptions = styled.div`
   }
 `;
 
-export default function Descriptions(props) {
+export default function Descriptions() {
   return (
     <StyledDescriptions>
       <div className="row">
-        <div className="col-md-auto">
-          <h2>Computational Genomics</h2>
-          <BrandButton>Our solutions</BrandButton>
+        <div className="col-6">
+          <h1>Computational Genomics</h1>
+          <br />
+          <BrandButton primary to="/products">
+            Our Solutions
+          </BrandButton>
         </div>
-        <div className="col-md-auto">
-          <p></p>
+
+        <div className="col-md-auto brand-button">
+          <img src={ImgSrc} width="500" />
         </div>
       </div>
     </StyledDescriptions>

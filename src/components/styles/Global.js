@@ -43,8 +43,5 @@ p{
     
 }
 
-img{
-    border-radius: 100%;
-    size
-}`;
+`;
 export default GlobalStyles;
