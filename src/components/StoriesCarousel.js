@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 import ImgSrc from "../assets/stories-background.jpg";
 
-const StyledStories = styled.section`
+const StyledStories = styled.div`
   background-image: url(${ImgSrc});
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
-  height: 50vh;
+  height: 40vh;
   color: white;
 
   .testimonial-container {
@@ -39,6 +39,8 @@ const StyledStories = styled.section`
   }
 
   @media (max-width: 820px) {
+    height: 50vh;
+
     .testimonial {
       line-height: 1.9;
       font-size: 14px;

@@ -92,7 +92,14 @@ const Home = () => {
     <>
       <Hero />
       <br />
-      <Box className="d-lg-flex justify-content-around p-5">
+      <Box
+        className="d-lg-flex justify-content-around p-5"
+        style={{
+          height: "100vh",
+          alignItems: "center",
+          justifyContent: "space-around",
+        }}
+      >
         {featured.map(({ image, title, id }) => (
           <div key={id} className="text-center pb-5">
             <ImageButton
@@ -130,6 +137,7 @@ const Home = () => {
         ))}
       </Box>
       <FullDescriptions />
+
       <StoriesCarousel />
     </>
   );

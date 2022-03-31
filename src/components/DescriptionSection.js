@@ -1,19 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 //Assets
 import ImgSrc from "../assets/description-dna.jpg";
 //Components
 import BrandButton from "./styles/BrandButton.styled";
 import Description from "./styles/ScrollAnimation";
+//MUI
+import Box from "@mui/material/Box";
 
-const StyledDescriptions = styled.section`
+const StyledDescriptions = styled.div`
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  .brand-button {
-    display: flex;
+  .flex-row {
+    justify-content: space-around;
+  }
+
+  .gradient-border {
+    -webkit-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1vw 28px 0px 0px rgba(0, 0, 0, 0.75);
   }
 
   h1 {
@@ -30,11 +36,9 @@ const StyledDescriptions = styled.section`
     h1 {
       font-size: 45px !important;
     }
-
-    .brand-button {
-      padding: 50px 0px 0px 0px !important;
+    .flex-col {
+      text-align: center;
     }
-
     .description-img {
       display: none;
     }
@@ -58,25 +62,25 @@ const StyledDescriptions = styled.section`
 export default function FullDescriptions() {
   return (
     <StyledDescriptions>
-      <div className="row">
-        <div className="col-md-auto">
+      <Box className="d-lg-flex justify-content-around p-5">
+        <div className="flex-col">
           <h1>
             <Description text="Computational " />
             <Description text="Genomics" />
           </h1>
           <br />
-          <BrandButton secondary to="/products">
-            Our Solutions
-          </BrandButton>
-          <BrandButton tertiary to="/products">
-            MatchDonor.org
-          </BrandButton>
+          <Link to="/products">
+            <BrandButton secondary>Our Solutions</BrandButton>
+          </Link>
+          <Link to="/products">
+            <BrandButton tertiary>MatchDonor.org</BrandButton>
+          </Link>
         </div>
 
-        <div className="col-md-auto description-img">
-          <img src={ImgSrc} width="400" />
+        <div className="flex-col description-img gradient-border">
+          <img src={ImgSrc} width="600" />
         </div>
-      </div>
+      </Box>
     </StyledDescriptions>
   );
 }

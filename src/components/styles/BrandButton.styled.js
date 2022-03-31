@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
-const BrandButton = styled(Link)`
+const BrandButton = styled.button`
   border-color: #0f0f27;
+  border-width: 0.5px;
   color: white;
   font-weight: 100;
   font-family: sans-serif;
@@ -42,9 +43,11 @@ const BrandButton = styled(Link)`
       font-size: 1em;
       padding: 20px 30px;
       background: white;
+      font-weight: 400;
+      &::hover {
+        background: white;
+      }
     `}
-
-  
 
   &:hover {
     color: white;

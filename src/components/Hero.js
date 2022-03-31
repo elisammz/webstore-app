@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Animated } from "react-animated-css";
 //Assets
 import ImgSrc from "../assets/hero-background-experimental.jpg";
@@ -22,7 +23,7 @@ const StyledHeader = styled.div`
   }
 
   .brand-button {
-    display: flex;
+    text-decoration: none;
   }
 
   h1 {
@@ -87,15 +88,15 @@ export default function Hero() {
                 Next generation of algorithms for accurate genotype prediction
               </h2>
             </div>
-            <div className="col-md-auto brand-button ">
+            <div className="col-md-auto ">
               <Animated
                 animationIn="fadeIn"
                 animationInDelay={2000}
                 isVisible={true}
               >
-                <BrandButton primary to="/products">
-                  View products
-                </BrandButton>
+                <Link to="/products" className="brand-button">
+                  <BrandButton primary>View products</BrandButton>
+                </Link>
               </Animated>
             </div>
           </div>

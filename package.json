@@ -24,6 +24,7 @@
     "react-intersection-observer": "^8.33.1",
     "react-material-ui-carousel": "^3.2.0",
     "react-router-dom": "^6.0.0-beta.8",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.0",
     "react-text-rotator": "^1.2.0",
     "stripe": "^8.203.0",

@@ -48,7 +48,7 @@ const ProductDetails = () => {
           <div className="col-6">
             <img src={url} alt={title} width="300" />
           </div>
-          <div className="col-6">
+          <div className="col-6" id="product-info">
             <h2>{title}</h2>
             <p2>{description}</p2>
             <h3>Price - ${price}</h3>
