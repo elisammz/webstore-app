@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
 //Context
 import { ProductContext } from "../context/products";
 import { CartContext } from "../context/cart";
-
 //Components
 import BrandButton from "../components/styles/BrandButton.styled";
 import Navbar from "../components/styles/Navbar.styled";

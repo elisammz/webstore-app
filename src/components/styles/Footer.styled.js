@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-//Components
-
 //Bootstrap components
 import { Nav } from "react-bootstrap";
-
 //Icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

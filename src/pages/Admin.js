@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { API, graphqlOperation, Storage } from "aws-amplify";
+import { API, Storage } from "aws-amplify";
 import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import styled from "styled-components";
-
-import { createProduct } from "../api/mutations";
 import * as mutations from "../api/mutations";
 import config from "../aws-exports";
 
-// Components
-
-import BrandButton from "../components/styles/BrandButton.styled";
-
-//Styled components
 const StyledContainer = styled.div`
   background-color: white;
   color: #21252a;

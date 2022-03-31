@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
 const BrandButton = styled.button`
   border-color: #0f0f27;
@@ -22,6 +21,14 @@ const BrandButton = styled.button`
         rgba(85, 111, 255, 1) 0%,
         rgba(255, 121, 142, 1) 100%
       );
+      &:hover {
+        color: white;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 121, 142, 1) 0%,
+          rgba(85, 111, 255, 1) 100%
+        );
+      }
     `}
 
   ${(props) =>
@@ -34,6 +41,14 @@ const BrandButton = styled.button`
         rgba(85, 111, 255, 1) 0%,
         rgba(255, 121, 142, 1) 100%
       );
+      &:hover {
+        color: white;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 121, 142, 1) 0%,
+          rgba(85, 111, 255, 1) 100%
+        );
+      }
     `}
 
      ${(props) =>
@@ -44,19 +59,11 @@ const BrandButton = styled.button`
       padding: 20px 30px;
       background: white;
       font-weight: 400;
-      &::hover {
-        background: white;
+      &:hover {
+        background: black;
+        color: white;
       }
     `}
-
-  &:hover {
-    color: white;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 121, 142, 1) 0%,
-      rgba(85, 111, 255, 1) 100%
-    );
-  }
 `;
 
 export default BrandButton;

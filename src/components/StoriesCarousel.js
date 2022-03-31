@@ -10,7 +10,7 @@ const StyledStories = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
-  height: 40vh;
+  height: 70vh;
   color: white;
 
   .testimonial-container {
@@ -39,7 +39,7 @@ const StyledStories = styled.div`
   }
 
   @media (max-width: 820px) {
-    height: 50vh;
+    height: 40vh;
 
     .testimonial {
       line-height: 1.9;

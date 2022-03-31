@@ -16,7 +16,6 @@ const StyledNavbar = styled.div`
   font-family: sans-serif;
   font-weight: 300;
   font-size: 17px;
-  justify-content: center;
 
   .styledLink {
     color: #9a9aa1;

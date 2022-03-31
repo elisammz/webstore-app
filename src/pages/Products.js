@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
-
 //Context
 import { ProductContext } from "../context/products";
-
 // Components
 import BrandButton from "../components/styles/BrandButton.styled";
 
