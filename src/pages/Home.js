@@ -137,7 +137,6 @@ const Home = () => {
         ))}
       </Box>
       <FullDescriptions />
-
       <StoriesCarousel />
     </>
   );

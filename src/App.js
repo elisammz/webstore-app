@@ -34,6 +34,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />

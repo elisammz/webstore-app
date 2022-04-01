@@ -78,7 +78,6 @@ export default function Hero() {
         animationInDuration={2000}
         isVisible={true}
       >
-        <Navbar />
         <StyledHeader>
           <div className="row lg-row">
             <div className="col-md-auto">

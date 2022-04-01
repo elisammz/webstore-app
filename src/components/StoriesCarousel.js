@@ -1,7 +1,7 @@
+import { height } from "@mui/system";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import styled from "styled-components";
-
 import ImgSrc from "../assets/stories-background.jpg";
 
 const StyledStories = styled.div`
@@ -10,14 +10,8 @@ const StyledStories = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
-  height: 70vh;
   color: white;
-
-  .testimonial-container {
-    margin: 35px 15px;
-    position: flex;
-    text-align: center;
-  }
+  height: 50vh;
 
   .testimonial-heading {
     font-size: 16px;
@@ -39,16 +33,20 @@ const StyledStories = styled.div`
   }
 
   @media (max-width: 820px) {
-    height: 40vh;
+    height: 60vh;
 
     .testimonial {
       line-height: 1.9;
       font-size: 14px;
     }
+
+    .testimonial-container {
+      padding: 20px 150px 0px 150px !important;
+    }
   }
 `;
 
-export default function Stor(props) {
+export default function StoriesCarousel(props) {
   var items = [
     {
       name: "Max Smith",
@@ -65,10 +63,19 @@ export default function Stor(props) {
 
   return (
     <StyledStories>
-      <Carousel>
+      <Carousel
+        navButtonsAlwaysVisible={true}
+        fullHeightHover={true}
+        navButtonsWrapperProps={{
+          style: {
+            top: "50px",
+          },
+        }}
+      >
         {items.map((item, i) => (
-          <div className="testimonial-container">
+          <div className="d-lg-flex justify-content-around text-center">
             <div key={i} item={item}>
+              <br />
               <div className=" testimonial-heading ">Real stories</div>
               <p className=" testimonial p-4">"{item.description}"</p>
               <h3 className="testimonial-name">{item.name}</h3>

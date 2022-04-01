@@ -12,10 +12,6 @@ import Box from "@mui/material/Box";
 const StyledDescriptions = styled.div`
   height: 100vh;
 
-  .flex-row {
-    justify-content: space-around;
-  }
-
   .gradient-border {
     -webkit-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);

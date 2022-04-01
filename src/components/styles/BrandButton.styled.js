@@ -10,6 +10,10 @@ const BrandButton = styled.button`
   text-decoration: none;
   margin: 10px 10px;
 
+  @media (max-width: 992px) {
+    padding: 5px 25px;
+  }
+
   ${(props) =>
     props.primary &&
     css`
