@@ -17,6 +17,7 @@ import "animate.css";
 //MUI
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 // Components
+import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/styles/Global";
 import Navbar from "./components/styles/Navbar.styled";
 import Footer from "./components/styles/Footer.styled";
@@ -35,15 +36,17 @@ function App() {
     <>
       <GlobalStyles />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </ScrollToTop>
       <Footer />
     </>
   );

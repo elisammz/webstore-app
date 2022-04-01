@@ -68,6 +68,21 @@ const BrandButton = styled.button`
         color: white;
       }
     `}
+
+    ${(props) =>
+    props.cuaternary &&
+    css`
+      border-color: white;
+      color: black;
+      font-size: 1em;
+      padding: 5px 5px;
+      background: white;
+      font-weight: 400;
+      &:hover {
+        background: black;
+        color: white;
+      }
+    `}
 `;
 
 export default BrandButton;

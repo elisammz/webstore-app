@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 //Context
 import { ProductContext } from "../context/products";
 import { CartContext } from "../context/cart";
 //Components
 import BrandButton from "../components/styles/BrandButton.styled";
-import Navbar from "../components/styles/Navbar.styled";
 
 const StyledProductsDetails = styled.section`
   height: 100vh;
@@ -40,7 +40,6 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Navbar />
       <StyledProductsDetails>
         <div className="row">
           <div className="col-6">
@@ -50,15 +49,16 @@ const ProductDetails = () => {
             <h2>{title}</h2>
             <p2>{description}</p2>
             <h3>Price - ${price}</h3>
-            <BrandButton
-              secondary
-              onClick={() => {
-                addToCart({ ...product, id });
-              }}
-              to="/cart"
-            >
-              Add to Cart
-            </BrandButton>
+            <Link to="/cart">
+              <BrandButton
+                secondary
+                onClick={() => {
+                  addToCart({ ...product, id });
+                }}
+              >
+                Add to Cart
+              </BrandButton>
+            </Link>
           </div>
         </div>
       </StyledProductsDetails>
