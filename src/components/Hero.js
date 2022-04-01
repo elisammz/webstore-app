@@ -13,13 +13,15 @@ const StyledHeader = styled.div`
   background-image: url(${ImgSrc});
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
   .row {
-    padding: 200px 150px 0px 150px;
+    padding: 0px 150px 0px 150px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .brand-button {
@@ -44,11 +46,6 @@ const StyledHeader = styled.div`
     h1 {
       font-size: 45px !important;
     }
-
-    .row {
-      justify-content: center;
-    }
-
     .brand-button {
       padding: 50px 0px 0px 0px !important;
     }
@@ -60,12 +57,7 @@ const StyledHeader = styled.div`
     }
 
     .row {
-      padding: 200px 20px 0px 20px !important;
       justify-content: left;
-    }
-
-    .brand-button {
-      padding: 50px 20px 0px 20px !important;
     }
   }
 `;
@@ -79,7 +71,7 @@ export default function Hero() {
         isVisible={true}
       >
         <StyledHeader>
-          <div className="row lg-row">
+          <div className="row">
             <div className="col-md-auto">
               <h1>Technology </h1>
               <TextAnimation />

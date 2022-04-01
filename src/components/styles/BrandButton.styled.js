@@ -10,10 +10,6 @@ const BrandButton = styled.button`
   text-decoration: none;
   margin: 10px 10px;
 
-  @media (max-width: 992px) {
-    padding: 5px 25px;
-  }
-
   ${(props) =>
     props.primary &&
     css`
@@ -32,6 +28,9 @@ const BrandButton = styled.button`
           rgba(255, 121, 142, 1) 0%,
           rgba(85, 111, 255, 1) 100%
         );
+      }
+      @media (max-width: 992px) {
+        padding: 5px 25px;
       }
     `}
 
@@ -53,6 +52,9 @@ const BrandButton = styled.button`
           rgba(85, 111, 255, 1) 100%
         );
       }
+      @media (max-width: 992px) {
+        padding: 5px 25px;
+      }
     `}
 
      ${(props) =>
@@ -67,20 +69,30 @@ const BrandButton = styled.button`
         background: black;
         color: white;
       }
+      @media (max-width: 992px) {
+        padding: 5px 25px;
+      }
     `}
 
     ${(props) =>
     props.cuaternary &&
     css`
       border-color: white;
-      color: black;
+      color: white;
       font-size: 1em;
       padding: 5px 5px;
-      background: white;
+      background: black;
       font-weight: 400;
       &:hover {
-        background: black;
         color: white;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 121, 142, 1) 0%,
+          rgba(85, 111, 255, 1) 100%
+        );
+      }
+      @media (max-width: 992px) {
+        padding: 0 auto;
       }
     `}
 `;

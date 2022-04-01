@@ -7,14 +7,41 @@ import { FiArrowUpCircle } from "react-icons/fi";
 import { FiArrowDownCircle } from "react-icons/fi";
 //Components
 import BrandButton from "../components/styles/BrandButton.styled";
-import { color } from "@mui/system";
 
 const StyledCart = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 24px;
+    padding: 40px;
+    margin: 0 auto;
+  }
+
+  .amount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around !important;
+    align-items: center;
+  }
 
   p {
     margin: 0 auto;
+  }
+
+  @media (max-width: 820px) {
+    margin: 0 auto;
+
+    .amount-btn {
+      font-size: 12px;
+    }
+
+    img {
+      display: none;
+    }
   }
 `;
 
@@ -24,27 +51,32 @@ const Cart = () => {
     useContext(CartContext);
 
   if (!cart.length) {
-    return <h3>Empty Cart</h3>;
+    return <h1>Empty Cart</h1>;
   }
   return (
     <>
       <StyledCart>
-        <div className="flex-row p-5">
+        <div className="row text-center">
           <h1>My Cart</h1>
           {cart.map(({ id, title, price, image, amount }) => (
-            <div key={id} className="row justify-content-evenly ">
+            <div key={id} className="row justify-content-around ">
               <div className="col-md-auto">
-                <img src={image} width="100" alt="cart item" />
+                <img src={image} width="200" alt="cart item" />
                 <p>{title}</p>
                 <p>$ {price}</p>
               </div>
 
-              <div className="col-md-auto">
-                <BrandButton cuaternary onClick={() => increaseAmount(id)}>
+              <div className=" amount col-md-auto">
+                <BrandButton
+                  className="amount-btn"
+                  cuaternary
+                  onClick={() => increaseAmount(id)}
+                >
                   <FiArrowUpCircle />
                 </BrandButton>
-                <p className="text-center">{amount}</p>
+                <p className="  text-center">{amount}</p>
                 <BrandButton
+                  className="amount-btn"
                   cuaternary
                   onClick={() => decreaseAmount(id, amount)}
                 >

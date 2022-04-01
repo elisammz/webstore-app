@@ -10,7 +10,7 @@ import Description from "./styles/ScrollAnimation";
 import Box from "@mui/material/Box";
 
 const StyledDescriptions = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 
   .gradient-border {
     -webkit-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);
@@ -32,15 +32,19 @@ const StyledDescriptions = styled.div`
     h1 {
       font-size: 45px !important;
     }
+
     .flex-col {
       text-align: center;
     }
+
     .description-img {
       display: none;
     }
   }
 
   @media (max-width: 820px) {
+    display: none;
+
     h1 {
       font-size: 30px !important;
     }

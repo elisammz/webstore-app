@@ -59,7 +59,7 @@ function NavBar() {
         <Container>
           <Animated
             animationIn="fadeIn"
-            animationInDelay={2000}
+            animationInDelay={4000}
             isVisible={true}
           >
             <Link to="/" className="styledLink bolder">

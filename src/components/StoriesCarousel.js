@@ -11,7 +11,7 @@ const StyledStories = styled.div`
   background-repeat: no-repeat;
   background-position: center right;
   color: white;
-  height: 50vh;
+  min-height: 50vh;
 
   .testimonial-heading {
     font-size: 16px;

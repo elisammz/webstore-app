@@ -9,7 +9,7 @@ import { CartContext } from "../context/cart";
 import BrandButton from "../components/styles/BrandButton.styled";
 
 const StyledProductsDetails = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -41,11 +41,11 @@ const ProductDetails = () => {
   return (
     <>
       <StyledProductsDetails>
-        <div className="row">
-          <div className="col-6">
+        <div className="row text-center">
+          <div className="col-md-auto">
             <img src={url} alt={title} width="300" />
           </div>
-          <div className="col-6" id="product-info">
+          <div className="col-md-auto" id="product-info">
             <h2>{title}</h2>
             <p2>{description}</p2>
             <h3>Price - ${price}</h3>

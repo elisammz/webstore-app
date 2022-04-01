@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 // Pages
 import Home from "./pages/Home";
 import Error from "./pages/Error";
@@ -14,8 +14,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 //Animations
 import "animate.css";
-//MUI
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 // Components
 import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/styles/Global";
@@ -27,16 +25,17 @@ import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
 
-const theme = createTheme({
-  palette: { type: "dark" },
-});
+const exclusionArray = ["/cart", "/checkout"];
 
-function App() {
+const App = () => {
+  const location = useLocation();
+  const isCartReendering = location.pathname === "/cart";
+
   return (
     <>
       <GlobalStyles />
-      <Navbar />
       <ScrollToTop>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
@@ -47,9 +46,9 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </ScrollToTop>
-      <Footer />
+      {!isCartReendering && <Footer />}
     </>
   );
-}
+};
 
 export default App;

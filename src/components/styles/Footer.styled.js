@@ -10,7 +10,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const StyledFooter = styled.section`
   background-color: #2d323d;
-  padding: 80px 20px;
+  padding: 30px 20px;
   color: #98a2a8;
   display: block;
   font-size: 15px;
@@ -40,7 +40,7 @@ const StyledFooter = styled.section`
 function Footer() {
   return (
     <StyledFooter>
-      <div className="d-sm-flex flex-row ">
+      <div className="d-lg-flex flex-row ">
         <div className="col">
           <h3>Contact us</h3>
           <p>help@genex.com</p>
