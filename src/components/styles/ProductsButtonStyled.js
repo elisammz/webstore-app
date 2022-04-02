@@ -84,14 +84,13 @@ const ProductsButtons = () => {
   return (
     <>
       <Box
-        className="d-lg-flex justify-content-around p-5"
+        className="row justify-content-around text-center"
         style={{
           minHeight: "100vh",
-          alignItems: "center",
         }}
       >
         {featured.map(({ image, title, id }) => (
-          <div key={id} className="text-center pb-5">
+          <div key={id} className="col-md-auto align-self-center p-3 ">
             <ImageButton
               focusRipple
               key={title}

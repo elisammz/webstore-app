@@ -7,7 +7,6 @@ import ImgSrc from "../assets/hero-background-experimental.jpg";
 //Components
 import BrandButton from "./styles/BrandButton.styled";
 import TextAnimation from "./styles/TextAnimation.styled";
-import Navbar from "../components/styles/Navbar.styled";
 
 const StyledHeader = styled.div`
   background-image: url(${ImgSrc});
@@ -20,7 +19,7 @@ const StyledHeader = styled.div`
 
   .row {
     padding: 0px 150px 0px 150px;
-    display: flex;
+
     flex-wrap: wrap;
   }
 
