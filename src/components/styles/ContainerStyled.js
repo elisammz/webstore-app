@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledContainer = styled(Box)`
   display: flex;
@@ -23,6 +23,7 @@ const StyledContainer = styled(Box)`
     -moz-box-shadow: 32px 28px 0px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 1vw 28px 0px 0px rgba(0, 0, 0, 0.75);
   }
+
   @media (max-width: 820px) {
     display: none;
   }
@@ -34,10 +35,6 @@ const StyledContainer = styled(Box)`
 
     .flex-col {
       text-align: center;
-    }
-
-    .description-img {
-      display: none;
     }
   }
 `;

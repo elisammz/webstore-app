@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../context/products";
 import { CartContext } from "../context/cart";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+//Components
+import BrandButton from "../components/styles/BrandButton.styled";
 
 const CARD_ELEMENT_OPTIONS = {
   style: {
@@ -69,30 +71,30 @@ const CheckoutForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="checkout-form">
-        <label htmlFor="checkout-address">Shipping Address</label>
+      <div>
+        <label>Shipping Address</label>
         <input
           id="checkout-address"
           type="text"
+          size="50"
           onChange={(e) =>
             setOrderDetails({ ...orderDetails, address: e.target.value })
           }
         />
-        <div className="stripe-section">
-          <label htmlFor="stripe-element"> Credit or debit card </label>
+        <div>
+          <label> Credit or debit card </label>
           <CardElement
             id="stripe-element"
             options={CARD_ELEMENT_OPTIONS}
             onChange={handleChange}
           />
         </div>
-        <div className="card-errors" role="alert">
-          {error}
-        </div>
+        <div role="alert">{error}</div>
       </div>
-      <button type="submit" className="btn">
+
+      <BrandButton primary type="submit">
         Submit Payment
-      </button>
+      </BrandButton>
     </form>
   );
 };

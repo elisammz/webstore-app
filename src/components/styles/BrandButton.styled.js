@@ -15,7 +15,7 @@ const BrandButton = styled.button`
     css`
       border-radius: 50px;
       font-size: 1em;
-      padding: 30px 45px;
+      padding: 20px 45px;
       background: linear-gradient(
         90deg,
         rgba(85, 111, 255, 1) 0%,
@@ -29,8 +29,8 @@ const BrandButton = styled.button`
           rgba(85, 111, 255, 1) 100%
         );
       }
-      @media (max-width: 992px) {
-        padding: 5px 25px;
+      @media (max-width: 500px) {
+        padding: 15px 25px;
       }
     `}
 

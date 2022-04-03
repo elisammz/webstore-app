@@ -7,7 +7,7 @@ import BrandButton from "./styles/BrandButton.styled";
 import Description from "./styles/ScrollAnimation";
 import StyledContainer from "./styles/ContainerStyled";
 
-export default function FullDescriptions() {
+function FullDescriptions() {
   return (
     <StyledContainer>
       <div className="flex-col description-section">
@@ -30,3 +30,5 @@ export default function FullDescriptions() {
     </StyledContainer>
   );
 }
+
+export default FullDescriptions;

@@ -45,12 +45,9 @@ const StyledHeader = styled.div`
     h1 {
       font-size: 45px !important;
     }
-    .brand-button {
-      padding: 50px 0px 0px 0px !important;
-    }
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 500px) {
     h1 {
       font-size: 30px !important;
     }
