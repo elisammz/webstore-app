@@ -38,6 +38,12 @@
           "deploymentBucketName": "amplify-mywebstorev2-dev-211350-deployment",
           "s3Key": "amplify-builds/processPayment-786c58624a6959483654-build.zip"
         }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1xmq45y5nvm74",
+          "type": "manual"
+        }
       }
     }
   }

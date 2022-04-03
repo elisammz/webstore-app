@@ -82,6 +82,9 @@ function NavBar() {
               <Link to="/checkout" className="styledLink">
                 Checkout
               </Link>
+              <Link to="/admin" className="styledLink">
+                Admin
+              </Link>
             </Nav>
           </Navbar.Collapse>
           <Link to="/" className="styledLink icon">

@@ -43,6 +43,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </ScrollToTop>

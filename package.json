@@ -1,7 +1,7 @@
 {
   "name": "mywebstorev2",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.25",
     "@emotion/react": "^11.8.1",
