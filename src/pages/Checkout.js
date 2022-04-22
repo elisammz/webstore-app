@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
+import { CartContext } from "../context/cart";
 import styled from "styled-components";
 
 const Checkout = () => {
@@ -25,12 +26,22 @@ const Checkout = () => {
     }
   `;
 
+  const { cart } = useContext(CartContext);
+
+  if (!cart.length) {
+    return (
+      <AmplifyAuthenticator>
+        <h1>Empty Cart</h1>
+      </AmplifyAuthenticator>
+    );
+  }
+
   return (
     <AmplifyAuthenticator>
       <Elements stripe={stripePromise}>
         <StyledCheckout>
           <div className="col-md-auto pb-5">
-            <h1>Time to Checkout?</h1>
+            <h1>Checkout</h1>
             <div className="col-md-auto">
               <CheckoutForm />
             </div>

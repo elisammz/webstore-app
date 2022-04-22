@@ -24,8 +24,8 @@ const StyledContainer = styled(Box)`
     box-shadow: 1vw 28px 0px 0px rgba(0, 0, 0, 0.75);
   }
 
-  @media (max-width: 820px) {
-    display: none;
+  .flex-col {
+    text-align: center;
   }
 
   @media (max-width: 992px) {
@@ -33,8 +33,8 @@ const StyledContainer = styled(Box)`
       font-size: 45px !important;
     }
 
-    .flex-col {
-      text-align: center;
+    @media (max-width: 820px) {
+      display: none;
     }
   }
 `;

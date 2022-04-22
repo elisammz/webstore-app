@@ -54,6 +54,16 @@ export const getProduct = /* GraphQL */ `
       image
       featured
       price
+      orders {
+        items {
+          id
+          product_id
+          order_id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }

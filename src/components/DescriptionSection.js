@@ -10,7 +10,7 @@ import StyledContainer from "./styles/ContainerStyled";
 function FullDescriptions() {
   return (
     <StyledContainer>
-      <div className="flex-col description-section">
+      <div className="flex-col ">
         <h1>
           <Description text="Computational " />
           <Description text="Genomics" />

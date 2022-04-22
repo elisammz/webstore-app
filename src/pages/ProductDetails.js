@@ -42,10 +42,10 @@ const ProductDetails = () => {
     <>
       <StyledProductsDetails>
         <div className="row text-center">
-          <div className="col-md-auto">
+          <div className="flex-col">
             <img src={url} alt={title} width="300" />
           </div>
-          <div className="col-md-auto" id="product-info">
+          <div className="flex-col" id="product-info">
             <h2>{title}</h2>
             <p2>{description}</p2>
             <h3>Price - ${price}</h3>

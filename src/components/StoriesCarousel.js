@@ -34,6 +34,7 @@ const StyledStories = styled.div`
 
   @media (max-width: 820px) {
     height: 60vh;
+    display: none;
 
     .testimonial {
       line-height: 1.9;

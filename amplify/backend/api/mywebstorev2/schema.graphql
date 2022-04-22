@@ -13,6 +13,7 @@ type Product
   image: String
   featured: Boolean
   price: Float
+  orders: [ProductOrder] @connection(keyName: "byProduct", fields: ["id"])
 }
 
 type ProductOrder

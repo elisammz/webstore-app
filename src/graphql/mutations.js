@@ -18,6 +18,16 @@ export const createProduct = /* GraphQL */ `
       image
       featured
       price
+      orders {
+        items {
+          id
+          product_id
+          order_id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -35,6 +45,16 @@ export const updateProduct = /* GraphQL */ `
       image
       featured
       price
+      orders {
+        items {
+          id
+          product_id
+          order_id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -52,6 +72,16 @@ export const deleteProduct = /* GraphQL */ `
       image
       featured
       price
+      orders {
+        items {
+          id
+          product_id
+          order_id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -86,6 +116,9 @@ export const createProductOrder = /* GraphQL */ `
         image
         featured
         price
+        orders {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -121,6 +154,9 @@ export const updateProductOrder = /* GraphQL */ `
         image
         featured
         price
+        orders {
+          nextToken
+        }
         createdAt
         updatedAt
       }
@@ -156,6 +192,9 @@ export const deleteProductOrder = /* GraphQL */ `
         image
         featured
         price
+        orders {
+          nextToken
+        }
         createdAt
         updatedAt
       }

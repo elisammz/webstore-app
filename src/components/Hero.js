@@ -15,11 +15,9 @@ const StyledHeader = styled.div`
   min-height: 100vh;
   align-items: center;
   display: flex;
-  justify-content: center;
 
   .row {
     padding: 0px 150px 0px 150px;
-
     flex-wrap: wrap;
   }
 
@@ -44,6 +42,10 @@ const StyledHeader = styled.div`
   @media (max-width: 992px) {
     h1 {
       font-size: 45px !important;
+    }
+    .row {
+      padding: 0px 10px 0px 10px;
+      flex-wrap: wrap;
     }
   }
 
